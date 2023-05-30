@@ -2,4 +2,16 @@
 
 @section('content')
 <h1>Home page</h1>
+
+@if(isLike)
+<h5>You like</h5>
+@else
+<h5>No like</h5>
+@endif
+
+@each(user in users)
+<li>
+    {{ user.name }}
+</li>
+@endeach
 @endsection

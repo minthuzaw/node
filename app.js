@@ -1,5 +1,5 @@
 import express from 'express';
-import router from "./router"
+import router from "./routes/router"
 // import { engine } from 'express-edge';
 const engine = require('express-edge');
 
