@@ -1,16 +1,9 @@
 import express from "express";
+import {home, about} from "../controllers/page";
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    let users = [
-        {name: "mtz"},
-        {name: "tt"}
-    ]
-    res.render('index', {users, isLike: false})
-})
+router.get("/", home);
 
-router.get('/about', (req, res) => {
-    res.render('about')
-})
+router.get("/about", about);
 export default router;
